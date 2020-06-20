@@ -1,0 +1,55 @@
+<section>
+    <!-- <article>
+        <h3>Interpolation</h3>
+        <p>Exemplo 1 + 1 = {{ 1 + 1 }}</p>
+    </article>
+    <article>
+        <h3>Property Binding</h3>
+        <img [src]="urlImagem"/>
+        <img bind-src="urlImagem"/>
+        <img src="{{ urlImagem }}"/>
+    </article>     -->
+
+    <!-- <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            <select #classeValue (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-danger">Error</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-info">Info</option>
+            </select>
+        </div>
+    <br><br>
+        <div class="alert {{ classeValue.value }}" role="alert">Sucesso</div>
+
+        <div class="alert" role="alert" [class.alert-success]="classeValue.value == 'alert-success'">Sucesso</div>
+        <div class="alert" role="alert" [class.alert-danger]="classeValue.value == 'alert-danger'">Error</div>
+        <div class="alert" role="alert" [class.alert-warning]="classeValue.value == 'alert-warning'">Alerta</div>
+        <div class="alert" role="alert" [class.alert-info]="classeValue.value == 'alert-info'">Info</div>
+    </article>
+
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button class="btn btn-primary" (click)="buttomClick()">Escutar onClick</button>
+            <input type="text" (keyup)="onKeyUp($event)"/>
+            <p>Valor Atual = {{ inputValue }}</p>
+        </div>
+        <span (mouseover)="onMonseOverOut(true)" (mouseout)="onMonseOverOut(false)"
+            [class.highlight]="isMouseOver">
+            Pass mouse
+        </span>
+    </article> -->
+
+    <article>
+        <h3>Two Way Data Binding</h3>
+        <div>
+            <input type="text" [value]="nameTwoWay" (input)="nameTwoWay = $event.target.value"/>
+            <!-- Using Two Way -->
+            <input type="text" [(ngModel)]="nameTwoWay" (ngModelChange)="nameTwoWay = $event"/>
+            <p>Valor Digitado = {{nameTwoWay}}</p>
+        </div>
+    </article>
+
+</section>
